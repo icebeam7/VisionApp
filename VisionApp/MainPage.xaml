@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisionApp.MainPage">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        
+
+    <Grid Margin="10"
+          RowSpacing="10"
+          ColumnSpacing="10"
+          RowDefinitions="Auto,*"
+          ColumnDefinitions="Auto,Auto,*">
+
+        <Button
+            x:Name="SelectPictureButton"
+            Text="Select a picture"
+            Clicked="SelectPictureButton_Clicked"
+            HorizontalOptions="Center" />
+
+        <Button
+            Grid.Column="1"
+            x:Name="AnalyzeButton"
+            Text="Analyze"
+            Clicked="AnalyzeButton_Clicked"
+            HorizontalOptions="Center" />
+
+        <Image
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            x:Name="SelectedImage"
+            WidthRequest="400"
+            HeightRequest="400"
+            Aspect="AspectFit"/>
+
+        <Editor 
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.RowSpan="2"
+            x:Name="EditorResult"
+            WidthRequest="800"
+            HeightRequest="600"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
